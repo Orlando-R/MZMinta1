@@ -67,7 +67,11 @@ namespace MZMinta1
             {
                 ertekek.Add(auto.ertek);
             }
-            
+            //kiiras:
+            foreach (int ertek in ertekek)
+            {
+                Console.WriteLine(ertek);
+            }
 
             //melyikből mennyi van -Dictionary<string, int> melyik tipusból hány darab a listában
             Dictionary<string, int> tipusDb = new Dictionary<string, int>();
@@ -83,6 +87,12 @@ namespace MZMinta1
                     tipusDb.Add(kulcs, 1);
                 }
             }
+            //kiiras:
+            foreach (KeyValuePair<string, int> item in tipusDb)
+            {
+                Console.WriteLine($"{item.Key} típusból {item.Value} darab");
+            }
+
 
             //filekiirás
         }
