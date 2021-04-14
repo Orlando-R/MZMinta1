@@ -94,7 +94,15 @@ namespace MZMinta1
             }
 
 
-            //filekiirás
+            //filekiirás -ha egy stringben van
+            string filenev = "statisztika.txt";
+            string kimenet = "ezt írom ki, ez lesz a fileban";
+            File.WriteAllText(filenev, kimenet); //bin/debug mappa jön létre statisztika névvel
+
+            //filekiiras-ha string [] amit ki kell irni: 
+            string[] kiirandoSorok = new string[3];
+            File.WriteAllLines(filenev, kiirandoSorok);//bin/debug mappa jön létre statisztika névvel
+
         }
     }
 }
